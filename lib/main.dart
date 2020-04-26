@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
+import 'list.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -37,8 +37,13 @@ class MyHomePageState extends State<MyHomePage>{
                   textColor: Colors.white,
                   onPressed: (){
                     setState(() {
-                      _counter++;
-                      this.msg = 'click times '+'$_counter';
+                      // _counter++;
+                      // this.msg = 'click times '+'$_counter';
+                      Navigator.push(context, MaterialPageRoute(builder:(context) {
+                                return  ListPage();
+                       }));
+
+
                     });
                   },
                   child: Text(
