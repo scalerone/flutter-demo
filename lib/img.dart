@@ -9,7 +9,7 @@ class ImgPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("img page"),
         ),
-      body:Column(
+      body:Row(
         children: <Widget>[
          Image(
           image: NetworkImage("https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"),

@@ -6,6 +6,7 @@ import 'detailpage.dart';
 import 'btn.dart';
 import 'contain.dart';
 import 'img.dart';
+import 'layout.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "btn":(context)=> new ButtonPage(),
         "con":(context)=> new ContainerPage(),
         "img":(context)=> new ImgPage(),
+        "layout":(context)=> new Layout(),
       },
       home: MyHomePage(),
     );
@@ -95,6 +97,12 @@ class MyHomePageState extends State<MyHomePage>{
                   child: Text('click to ImgPage'),
                   onPressed: (){
                     Navigator.pushNamed(context, "img");
+                  }
+                  ,),
+                RaisedButton(
+                  child: Text('click to Layout'),
+                  onPressed: (){
+                    Navigator.pushNamed(context, "layout");
                   }
                   ,),
               ],),
