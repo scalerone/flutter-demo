@@ -5,6 +5,7 @@ import 'page2.dart';
 import 'detailpage.dart';
 import 'btn.dart';
 import 'contain.dart';
+import 'img.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         "DetailPage":(context)=> DetailPage(), //增加详情页的路由配置
         "btn":(context)=> new ButtonPage(),
         "con":(context)=> new ContainerPage(),
+        "img":(context)=> new ImgPage(),
       },
       home: MyHomePage(),
     );
@@ -87,6 +89,12 @@ class MyHomePageState extends State<MyHomePage>{
                   child: Text('click to ContainerPage'),
                   onPressed: (){
                     Navigator.pushNamed(context, "con");
+                  }
+                  ,),
+                RaisedButton(
+                  child: Text('click to ImgPage'),
+                  onPressed: (){
+                    Navigator.pushNamed(context, "img");
                   }
                   ,),
               ],),
