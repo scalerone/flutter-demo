@@ -3,6 +3,9 @@ import 'package:flutter/rendering.dart';
 import 'list.dart';
 import 'page2.dart';
 import 'detailpage.dart';
+import 'btn.dart';
+import 'container.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -16,6 +19,8 @@ class MyApp extends StatelessWidget {
         "ListPage":(context)=> ListPage(),
         "Page2":(context)=> TextPage(),
         "DetailPage":(context)=> DetailPage(), //增加详情页的路由配置
+        "btn":(context)=> new ButtonPage(),
+        "con":(context)=> new ContainerPage(),
       },
       home: MyHomePage(),
     );
@@ -61,7 +66,7 @@ class MyHomePageState extends State<MyHomePage>{
                   ),
                 ),
                 RaisedButton(
-                  child: Text('click to page2'),
+                  child: Text('click to textpage'),
                   onPressed: (){
                     Navigator.pushNamed(context, "Page2");
                   }
@@ -71,7 +76,19 @@ class MyHomePageState extends State<MyHomePage>{
                   onPressed: (){
                     Navigator.pushNamed(context, "ListPage");
                   }
-                  ,)
+                  ,),
+                RaisedButton(
+                  child: Text('click to ButtonPage'),
+                  onPressed: (){
+                    Navigator.pushNamed(context, "btn");
+                  }
+                  ,),
+                RaisedButton(
+                  child: Text('click to ContainerPage'),
+                  onPressed: (){
+                    Navigator.pushNamed(context, "con");
+                  }
+                  ,),
               ],),
               )
         );

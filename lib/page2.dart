@@ -10,7 +10,7 @@ class TextPage extends StatelessWidget {
         title: Text("hello page"),
         ),
       body:Center(child: Text(
-        "Hello world",
+        "Hello world"*3,
         style: TextStyle(
           fontSize: 50,
           fontWeight: FontWeight.bold,
