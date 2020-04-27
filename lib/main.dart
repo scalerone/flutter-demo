@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'list.dart';
 import 'page2.dart';
+import 'detailpage.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "ListPage":(context)=> ListPage(),
         "Page2":(context)=> TextPage(),
+        "DetailPage":(context)=> DetailPage(), //增加详情页的路由配置
       },
       home: MyHomePage(),
     );

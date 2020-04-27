@@ -18,8 +18,12 @@ class ListPage extends StatelessWidget {
       list.add( ListTile( 
           title: Text(item["title"],style: TextStyle(fontSize: 18.0) ),
           subtitle: Text(item["subtitle"]),
-          leading:  Icon( Icons.fastfood, color:Colors.orange ),
-          trailing: Icon(Icons.keyboard_arrow_right)
+          leading:  Icon( Icons.favorite, color:Colors.orange ),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap:(){
+            //点击的时候，进行路由跳转传参
+             Navigator.pushNamed(context, "DetailPage", arguments:item);
+          },
       ));
     }
   //    List l1 = ['a', 'b', 'c', 'd'];
