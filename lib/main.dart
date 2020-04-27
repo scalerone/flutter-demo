@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'list.dart';
+import 'page2.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -9,6 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      //路由表定义
+      routes: {
+        "ListPage":(context)=> ListPage(),
+        "Page2":(context)=> TextPage(),
+      },
       home: MyHomePage(),
     );
   }
@@ -51,8 +57,19 @@ class MyHomePageState extends State<MyHomePage>{
                     style: TextStyle(fontSize: 14.0),
                   
                   ),
-
-                )
+                ),
+                RaisedButton(
+                  child: Text('click to page2'),
+                  onPressed: (){
+                    Navigator.pushNamed(context, "Page2");
+                  }
+                  ,),
+                RaisedButton(
+                  child: Text('click to ListPage'),
+                  onPressed: (){
+                    Navigator.pushNamed(context, "ListPage");
+                  }
+                  ,)
               ],),
               )
         );
