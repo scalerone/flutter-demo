@@ -8,10 +8,12 @@ class ContainerPage extends StatelessWidget {
       body: Center(
         child:Container(
           color: Colors.blue,
+           padding: EdgeInsets.all(30),
+           margin: EdgeInsets.fromLTRB(150,0,0,0),
            width: 200,
            height: 200,
            child: Text("Hello Container ",style:TextStyle(fontSize: 20,color: Colors.white)),
-
+           transform: Matrix4.rotationZ(0.2)
         )
       
       ,),
