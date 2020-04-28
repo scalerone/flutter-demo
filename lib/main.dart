@@ -8,6 +8,7 @@ import 'contain.dart';
 import 'img.dart';
 import 'layout.dart';
 import 'flex.dart';
+import 'input.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         "img":(context)=> new ImgPage(),
         "layout":(context)=> new Layout(),
         "flex":(context)=>  FlexPage(),
+        "input":(context)=>  InputPage(),
       },
       home: MyHomePage(),
     );
@@ -111,6 +113,12 @@ class MyHomePageState extends State<MyHomePage>{
                   child: Text('click to flex'),
                   onPressed: (){
                     Navigator.pushNamed(context, "flex");
+                  }
+                  ,),
+                RaisedButton(
+                  child: Text('click to InputPage'),
+                  onPressed: (){
+                    Navigator.pushNamed(context, "input");
                   }
                   ,),
               ],),
